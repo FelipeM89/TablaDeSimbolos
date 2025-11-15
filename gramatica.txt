@@ -1,0 +1,9 @@
+
+# Gramática para expresiones aritméticas con declaraciones
+# Soporta: int, float, +, -, *, /, paréntesis
+
+S -> D S | E
+D -> int id ; | float id ;
+E -> E + T | E - T | T
+T -> T * F | T / F | F
+F -> ( E ) | num | id
